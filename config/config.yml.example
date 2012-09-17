@@ -1,0 +1,9 @@
+development:
+  FB_APP_ID: facebook app id
+  FB_APP_SECRET: facebok app secret
+test:
+  FB_APP_ID: facebook app id
+  FB_APP_SECRET: facebok app secret
+production:
+  FB_APP_ID: facebook app id
+  FB_APP_SECRET: facebok app secret
