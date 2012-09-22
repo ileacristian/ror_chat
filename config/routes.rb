@@ -1,5 +1,7 @@
 RorChat::Application.routes.draw do
 
+  root :to => "webpage#index"
+
   get "control_panel", :to =>"control_panel#index", :as => :control_panel
 
   get   '/login', :to => 'sessions#new', :as => :login
