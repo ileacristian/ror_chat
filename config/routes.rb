@@ -1,5 +1,7 @@
 RorChat::Application.routes.draw do
 
+  get "control_panel", :to =>"control_panel#index", :as => :control_panel
+
   get   '/login', :to => 'sessions#new', :as => :login
   get   '/logout', :to => 'sessions#destroy', :as => :logout
   match '/auth/:provider/callback', :to => 'sessions#create'

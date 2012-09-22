@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
     else
       user = User.create :name => auth_hash["info"]["name"], :email => auth_hash["info"]["email"]
       Authorization.create :provider => auth_hash["provider"], :uid => auth_hash["uid"], :user_id => user.id
+      Settings.create :user_id => user.id
       session[:user_id] = user.id
 
       render :text => "Hi #{user.name}! You've signed up."
