@@ -30,6 +30,12 @@
               <li><%= link_to "Control panel", control_panel_path %></li>
             </ul>
             <ul class="nav pull-right">
+              <li>
+              <a href="<%=control_panel_path%>" >
+                <img src="<%= session[:user_avatar]%>" class="img24x24"/>
+                <%= current_user.name%>
+              </a>
+              </li>
               <li><%= link_to "Logout", logout_path %></li>
             </ul>
           </div>
