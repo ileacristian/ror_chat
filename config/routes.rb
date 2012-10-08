@@ -2,7 +2,11 @@ RorChat::Application.routes.draw do
 
   root :to => "webpage#index"
 
-  get "control_panel", :to =>"control_panel#index", :as => :control_panel
+  get "control_panel", :to => "control_panel#index", :as => :control_panel
+  get "signup", :to => "sessions#signup", :as => :signup
+  get "no_social_login", :to => "sessions#new_no_social_login", :as => :no_social_login
+  post "no_social_login", :to => "sessions#no_social_login", :as => :no_social_login
+  post "create_user", :to => "sessions#create_user", :as => :create_user
 
   get   '/login', :to => 'sessions#new', :as => :login
   get   '/logout', :to => 'sessions#destroy', :as => :logout

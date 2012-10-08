@@ -33,4 +33,16 @@ class SessionsController < ApplicationController
   def failure
     render :text=> "Sorry, nu ne-ai dat acces prin aplicatie:("
   end
+
+  def signup
+  end
+
+  def create_user
+  end
+  
+  def new_no_social_login
+  end
+
+  def no_social_login
+  end
 end
